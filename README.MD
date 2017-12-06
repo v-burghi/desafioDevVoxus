@@ -19,3 +19,10 @@ o arquivo src/main/resources-> aplication.properties nas configurações 'spring
 'spring.datasource.password=123' podem ser alterados conforme necessidade.
 Execute o script localizado na pasta 'mysql' do projeto para criar o banco, e o projeto estará pronto para ser utilizado.
 
+Cada etapa levou cerca de um dia sendo feita. Passei o domingo estudando e fiz os html's, a segunda no backend e no banco de dados, e terça no front end e na integração entre ambos.
+
+Como já estava acostumado com a tecnologia, pos trabalho com ela atualmente, executar back e front não foram difíceis, no entanto a login com o google foi um problema, pois a sessão parece não persistir, e tive que usar o local storage do browser para armazenar os dados do usuário. Há pouca documentação e ela parece vaga. A parde de anexos também não foi feita, pois não houve tempo, porque não pude estudar tanto como armazenar os arquivos na aplicação, quanto na plataforma da Amazon.
+
+No entanto foi muito divertido fazer o projeto, e crio que com um pouco mais de tempo(uma semana, talvez) eu poderia ter completado ele de acordo com as especificações.
+
+Obrigado.
