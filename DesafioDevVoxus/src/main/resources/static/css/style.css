@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/12/2017, 18:05:54
+    Author     : victo
+*/
+
+#tela-login{
+    margin-top: 10%;
+}
+
+.logo{
+    text-align: center;
+}
+
+#login{
+    margin-top: 5%;
+}
+
+.btn-login{
+    color:#fff;
+}
+
+.navbar-home{
+ background-color: #613C70;
+ 
+}
+
+.texto-branco{
+    color: #fff;
+}
+
+#card-nova-tarefa{
+    margin-top: 3%;
+    padding: 0;
+    
+}
+
+.form-task{
+ margin-bottom: 3%;   
+}
+
+#btn-enviar{
+    margin-left: 93%;
+}
+
+#aviso-tarefa{
+    margin-top: 2%;
+    text-align: center;
+}
+
+.criado-por{
+    text-align: center;
+    margin-top:20%;
+}
+
+#tabela-tarefas{
+    margin-top: 5%;
+}
+
+.btn-tarefa{
+    background-color: #ff6a36;
+}
+
+#painel-login{
+	width: 50%;
+	height: 50%;
+}

@@ -1,0 +1,90 @@
+       
+       <nav class="navbar navbar-expand-lg navbar-home">
+            <a class="navbar-brand texto-branco" href="home.html">
+                <img src="img/voxus_logo_company.png" height="50" alt="logo-voxus"/>
+                Voxus
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link texto-branco" href="/voxus/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto-branco" href="#">Nova Tarefa</a>
+                    </li>
+                                      
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <label class="texto-branco">Bem vindo, {{vm.firstName}}</label>
+                    <a class="btn btn-danger" href="../index.html">Sair</a>
+                </form>
+            </div>
+        </nav>
+        
+        <div class="row justify-content-center" >
+            <div class="alert alert-success col-xl-8" ng-if="vm.sucesso===true" id="aviso-tarefa">Tarefa criada com sucesso!</div>
+        </div>
+        <div class="row justify-content-center" >
+            <div class="alert alert-warning col-xl-8" ng-if="vm.erro===true" id="aviso-tarefa">Atenção! Ocorreu um problema.</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card col-xl-10" id="card-nova-tarefa">
+                <div class="card-header">
+                    <h4 class="card-title">Criar nova tarefa</h4>
+                </div>
+                <div class="card-body">
+                    <form name="form-nova-tarefa">
+                        <div class="form-row form-task">
+                            <label class="col-xl-2">Nome da tarefa:</label>
+                            <input class="col-xl-10 form-control" type="text" ng-model="vm.tarefa.nomeTarefa"/>
+                        </div>
+                        <div class="form-row form-task">
+                            <label class="col-xl-2">Descrição da tarefa:</label>
+                            <textarea class="col-xl-10 form-control" style="overflow: hidden" rows="3"
+                            ng-model="vm.tarefa.descTarefa"></textarea>
+                        </div>
+                        <div class="form-row form-task">
+                            <label class="col-xl-2">Prioridade:</label>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" name="prioridade" ng-model="vm.tarefa.prioridade" id="inlineRadio1" value="1"> 1
+                                </label>
+                             </div>
+                             <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" name="prioridade" ng-model="vm.tarefa.prioridade" id="inlineRadio2" value="2"> 2
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" name="prioridade" ng-model="vm.tarefa.prioridade" id="inlineRadio3" value="3"> 3
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" name="prioridade" ng-model="vm.tarefa.prioridade" id="inlineRadio4" value="4"> 4
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" name="prioridade" ng-model="vm.tarefa.prioridade" id="inlineRadio5" value="5"> 5
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row form-task">
+                            <label class="col-xl-2">Anexos:</label>
+                            <input type="file" class="form-control-file" id="anexo">
+                        </div>
+                        
+                        <div class="form-row" id="btn-enviar">
+                            <input class="btn btn-success"  type="submit" value="Enviar" ng-click="vm.gravarTarefa()"/>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>

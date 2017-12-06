@@ -1,0 +1,55 @@
+
+        <nav class="navbar navbar-expand-lg navbar-home">
+            <a class="navbar-brand texto-branco" href="#">
+                <img src="../img/voxus_logo_company.png" height="50" alt="logo-voxus"/>
+                Voxus
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link texto-branco" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto-branco" href="/voxus/novatarefa">Nova Tarefa</a>
+                    </li>
+                                      
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                	<label class="texto-branco" >Bem vindo, {{vm.firstName}}</label>
+                    <a class="btn btn-danger" href="../index.html">Sair</a>
+                </form>
+            </div>
+        </nav>
+        <div class="row justify-content-center" id="tabela-tarefas">
+            <div class="col-xl-12">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Descrição</th>
+                        <th>Prioridade</th>
+                        <th>Submetida por</th>
+                        <th>Concluida por</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                        <th>Concluir</th>
+                    </tr>
+                    <tr ng-repeat="tarefa in vm.tarefas">
+                        <td>{{tarefa.nomeTarefa}}</td>
+                        <td>{{tarefa.descTarefa}}</td>
+                        <td>{{tarefa.prioridade}}</td>
+                        <td>{{tarefa.usuarioCriador}}</td>
+                        <td>{{tarefa.usuarioFinalizador}}</td>
+                        <td><button class="btn btn-tarefa"><img src="../img/icons8-Editar Arquivo-50.png" height="20" alt="editar"/></button></td>
+                        <td><button class="btn btn-tarefa"><img src="../img/icons8-Lixeira vazia-50.png" height="20" alt="excluir"
+                        ng-click="vm.excluirTarefa(tarefa)"/></button></td>
+                        <td><button class="btn btn-tarefa"><img src="../img/icons8-Selecionado-50.png" height="20" alt="concluir"
+                        ng-click="vm.concluirTarefa(tarefa)"/></button></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
